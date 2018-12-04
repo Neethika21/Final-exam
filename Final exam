@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+// Function to compare the no. of leading zeros 
+void LeadingZeros(int x, int y) 
+{ 
+    // if both have same no. of leading zeros 
+    if ((x ^ y) <= (x & y))  
+        cout << "\nEqual"; 
+  
+    else if ((x & (~y)) > y)  
+        cout << "Not equal. "<<y<< " has more number of leading zeros."; 
+  
+    else 
+        cout << "Not equal. "<<x<< " has more number of leading zeros."; 
+} 
+   
+int main() 
+{ 
+    int x = 10, y = 16; 
+    LeadingZeros(x, y); 
+    return 0; 
+}
